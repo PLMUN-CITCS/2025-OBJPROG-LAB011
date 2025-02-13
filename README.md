@@ -1,7 +1,7 @@
-# **2025-OBJPROG-LAB007**
+# **2025-OBJPROG-LAB009**
 Week 03-04 - Conditional and Looping Statements
 
-Laboratory # 07 - Guided Coding Exercise 1: Boolean Expressions and Relational/Logical Operators Demo
+Laboratory # 09 - Guided Coding Exercise 3: Switch Statement
 
 ## **Instructions**
 
@@ -77,7 +77,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Laboratory # 07 - Guided Coding Exercise 1: Boolean Expressions and Relational/Logical Operators Demo**
+**Laboratory # 09 - Guided Coding Exercise 3: Switch Statement**
 
    **Objective:**
    - Understand boolean literals, variables, and expressions.
@@ -86,20 +86,27 @@ Only perform this if this is the first time you will setup your Git Environment
    **File Naming Convention:**
    - `BooleanExpressionsDemo.java`
 
+   **Desired Output (with day = 4 and grade = 'B'):**
+   ```txt
+   Thursday: Almost there.
+   Good job!
+   ```
+
    **Notable Observations (to be discussed after completing the exercise):**
-   - Pay attention to how the relational and logical operators work. Experiment with different values to see how the results change.
-   - The use of parentheses in complex expressions helps to avoid ambiguity and ensures the expressions are evaluated in the intended order.
+   - switch statements are efficient for checking a single variable against multiple discrete values.
+   - break statements are crucial to prevent fall-through.
 
    **Java Programming Best Practices:**
    - Use descriptive variable names.
-   - Comment your code to explain the logic of the boolean expressions.
-   - Use consistent indentation to make your code easier to read.
+   - Comment your code.
+   - Always include break statements (unless fall-through is intended).
+   - Use a default case.
       
    **Step-by-Step Instructions:**
 
    1. Setup Class and Main Method
-      - Create a file named `BooleanExpressionsDemo.java`.
-      - Define the class `BooleanExpressionsDemo` and its `main` method.
+      - Create a file named `SwitchStatementDemo.java`.
+      - Define the class `SwitchStatementDemo` and its `main` method.
       ```Java
       public class BooleanExpressionsDemo {
           public static void main(String[] args) {
@@ -108,81 +115,89 @@ Only perform this if this is the first time you will setup your Git Environment
       }
       ```
             
-   2. Declare Boolean Variables
-      - Inside the main method, declare a boolean variable named isJavaFun and initialize it to true.
-      - Declare another boolean variable named isHomeworkTiring and initialize it to false.
+   2. Declare Day Variable (Integer)
+   - Inside the main method, declare an integer variable named dayOfWeek.
+   - Initialize dayOfWeek to 4 (representing Thursday).
       ```Java
-      boolean isJavaFun = true;
-      boolean isHomeworkTiring = false;
+      int dayOfWeek = 4;
       ```
 
-   3. Declare Integer Variables
-      - Declare an integer variable named a and initialize it to 15.
-      - Declare another integer variable named b and initialize it to 20.
+   3. Switch Statement for Day of the Week
+      - Write a switch statement using dayOfWeek as the expression.
+      - Create case labels for each day of the week (1 to 7).
+      - Inside each case block, print a message related to that day.
+      - Add a break statement at the end of each case block.
+      - Include a default case to handle invalid day numbers.
       ```Java
-      int a = 15;
-      int b = 20;
+      switch (dayOfWeek) {
+          case 1:
+              System.out.println("Monday: Start of the work week.");
+              break;
+          case 2:
+              System.out.println("Tuesday: Keep going!");
+              break;
+          case 3:
+              System.out.println("Wednesday: Midweek.");
+              break;
+          case 4:
+              System.out.println("Thursday: Almost there.");
+              break;
+          case 5:
+              System.out.println("Friday: Weekend is near.");
+              break;
+          case 6:
+              System.out.println("Saturday: Enjoy your day off!");
+              break;
+          case 7:
+              System.out.println("Sunday: Rest and recharge.");
+              break;
+          default:
+              System.out.println("Invalid day.");
+      }
       ```
 
-   4. Relational Expression (Greater Than)
-      - Declare a boolean variable named isAGreater.
-      - Create a relational expression that checks if a is greater than b. Assign the result to isAGreater.
+   4. Declare Grade Variable (Character)
+      - Declare a character variable named studentGrade.
+      - Initialize studentGrade to 'B'.
       ```Java
-      boolean isAGreater = a > b;
+      char studentGrade = 'B';
       ```
 
-   5. Relational Expression (Equal To)
-      - Declare a boolean variable named areEqual.
-      - Create a relational expression that checks if a is equal to b. Assign the result to areEqual.
+   5. Switch Statement for Grade Evaluation
+      - Write a switch statement using studentGrade as the expression.
+      - Create case labels for each letter grade ('A', 'B', 'C', 'D', 'F').
+      - Inside each case block, print a message appropriate for that grade.
+      - Include break statements in each case.
+      - Add a default case for invalid grades.
       ```Java
-      boolean areEqual = a == b;
+      switch (studentGrade) {
+          case 'A':
+              System.out.println("Excellent!");
+              break;
+          case 'B':
+              System.out.println("Good job!");
+              break;
+          case 'C':
+              System.out.println("Well done!");
+              break;
+          case 'D':
+              System.out.println("You passed.");
+              break;
+          case 'F':
+              System.out.println("Better luck next time.");
+              break;
+          default:
+              System.out.println("Invalid grade.");
+      }
       ```
 
-   6. Logical AND
-      - Declare a boolean variable named bothTrue.
-      - Create a logical expression using the && operator. It should check if isJavaFun AND a < b. Assign the result to bothTrue.
-      ```Java
-      boolean bothTrue = isJavaFun && (a < b);
-      ```
+   6. Compile and Run
+       - Save the file as `SwitchStatementDemo.java`.
+       - Compile the code using `javac SwitchStatementDemo.java` in your terminal or command prompt.
+       - Run the compiled code using `java SwitchStatementDemo`.
 
-   7. Logical OR
-      - Declare a boolean variable named eitherTrue.
-      - Create a logical expression using the || operator. It should check if isJavaFun OR isHomeworkTiring. Assign the result to eitherTrue.
-      ```Java
-      boolean eitherTrue = isJavaFun || isHomeworkTiring;
-      ```
-      
-   8. Logical NOT
-      - Declare a boolean variable named notTrue.
-      - Create a logical expression using the ! (NOT) operator. It should apply NOT to isHomeworkTiring. Assign the result to notTrue.
-      ```Java
-      boolean notTrue =!isHomeworkTiring;
-      ```
-      
-   9. Logical XOR
-      - Declare a boolean variable named exclusiveOr.
-      - Create a logical expression using the ^ (XOR) operator. It should check if isJavaFun XOR isHomeworkTiring. Assign the result to exclusiveOr.
-      ```Java
-      boolean exclusiveOr = isJavaFun ^ isHomeworkTiring;
-      ```
-
-   10. Output Results (Formatted)
-      - Use `System.out.println()` to print the values of all the boolean variables with descriptive labels.  Match the labels in the "Desired Output" section.
-   ```Java
-   System.out.println("Is Java fun? " + isJavaFun);
-   System.out.println("Is homework tiring? " + isHomeworkTiring);
-   System.out.println("Is 'a' greater than 'b'? " + isAGreater);
-   System.out.println("Are 'a' and 'b' equal? " + areEqual);
-   System.out.println("Both conditions (isJavaFun && a<b): " + bothTrue);
-   System.out.println("Either condition (isJavaFun || isHomeworkTiring): " + eitherTrue);
-   System.out.println("Logical NOT of isHomeworkTiring: " + notTrue);
-   System.out.println("Exclusive OR (isJavaFun ^ isHomeworkTiring): " + exclusiveOr);
-   ```
-
-   12. Compile and Run
-       - Save the file as `BooleanExpressionsDemo.java`.
-       - Compile the code using `javac BooleanExpressionsDemo.java` in your terminal or command prompt.
-       - Run the compiled code using `java BooleanExpressionsDemo`.
+   **Conclusion**
+   This exercise demonstrates the use of switch statements for multi-conditional selection. switch statements are a clean and efficient way to handle multiple choices based on a single value.  They are particularly useful when dealing with a fixed set of values, improving code readability and maintainability. Remember the importance of break statements and the default case for robust and predictable code.  Consider switch statements as a good alternative to long if-else chains when appropriate.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
