@@ -251,32 +251,32 @@ Only perform this if this is the first time you will setup your Git Environment
 
    9. Case 3: Exit
       - Inside case 3, print "Exiting the program. Goodbye!".
-      ```Java
-      // Option 3: Exit the program.
-      System.out.println("Exiting the program. Goodbye!");
-      ```
+```Java
+// Option 3: Exit the program.
+System.out.println("Exiting the program. Goodbye!");
+```
 
    10. Case 3: Exit
       - In the default case, print "Invalid option. Please choose between 1 and 3."
-      ```Java
-      System.out.println("Invalid option. Please choose between 1 and 3.");
-      ```
+```Java
+System.out.println("Invalid option. Please choose between 1 and 3.");
+```
 
    11. Ask to Continue
       - After the switch block, ask the user if they want to continue: "Do you want to return to the menu? (Y/N): "
       - Use input.nextLine() to consume the leftover newline.
       - Read the user's response using input.nextLine(), convert it to uppercase, and store the first character in userChoice.
-      ```Java
-      System.out.print("Do you want to return to the menu? (Y/N): ");
-      input.nextLine(); // Consume newline
-      userChoice = input.nextLine().toUpperCase().charAt(0);
-      ```
+```Java
+System.out.print("Do you want to return to the menu? (Y/N): ");
+input.nextLine(); // Consume newline
+userChoice = input.nextLine().toUpperCase().charAt(0);
+```
 
    12. Close Scanner
       - Outside the do-while loop, close the Scanner object using input.close();.
-      ```Java
-      input.close();
-      ```
+```Java
+input.close();
+```
 
    13. Compile and Run
        - Save the file as `NumberClassifierMenu.java`.
