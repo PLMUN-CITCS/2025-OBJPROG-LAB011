@@ -217,7 +217,20 @@ Only perform this if this is the first time you will setup your Git Environment
       ```Java
       System.out.print("Enter a number to classify: ");
       int number = input.nextInt();
-      //... if-else statements for classification...
+      // Use if–else selection to classify the number.
+      if (number > 0) {
+         System.out.println("The number " + number + " is positive.");
+      } else if (number < 0) {
+         System.out.println("The number " + number + " is negative.");
+      } else {
+         System.out.println("The number is zero.");
+      }
+      // Demonstrate additional boolean expression: check if the number is even.
+      if (number % 2 == 0) {
+         System.out.println("It is also an even number.");
+      } else {
+         System.out.println("It is an odd number.");
+      }
       ```
 
    8. Case 2: Multiplication Table
@@ -230,12 +243,16 @@ Only perform this if this is the first time you will setup your Git Environment
       System.out.print("Enter a number to display its multiplication table: ");
       int tableNumber = input.nextInt();
       System.out.println("Multiplication Table for " + tableNumber + ":");
-      //... for loop for multiplication table...
+      // Use a for loop for table generation.
+      for (int i = 1; i <= 10; i++) {
+         System.out.println(tableNumber + " x " + i + " = " + (tableNumber * i));
+      }
       ```
 
    9. Case 3: Exit
       - Inside case 3, print "Exiting the program. Goodbye!".
       ```Java
+      // Option 3: Exit the program.
       System.out.println("Exiting the program. Goodbye!");
       ```
 
